@@ -7,12 +7,15 @@ $(function () {
     const editPurchase = url + '/api/purchase/' + id;
     const getBillnumber = url + '/api/numb/bills';
     const deletePurchase = url + '/api/purchase';
+    const getNames = url + '/api/name/items';
     const deleteBill = url + '/api/bill/' + id;
     var div = $('#records');
     var eq = 0;
     var prev = "";
     var counter = 0;
     var billNumb = id[0];
+    var autocompleteoptions = null;
+
 
     get(getBills).done(function (data) 
     {  
@@ -31,20 +34,34 @@ $(function () {
             prev = $(this).val();
         });
     
-        $(':input[name="item_name"]').trigger('change');
-
-        div.on('change',' :input[name="item_name"]',function (e)
+        get(getNames).done(function(data)
         {
-            e.stopPropagation();
-            var element = $(this);
-            fetchRecords(element.val()).done(function (data)
-            {
-                var parent = div.find('tr').eq(eq);
-                parent.find(' :input[name="code"]').val(data.id);
-                parent.find(' :input[name="purchase_price"]').val(data.purchase_price);
-                parent.find(' :input[name="quantity"]').focus();
-            })
-        });
+            dataName = data;
+            autocompleteoptions = {
+                source: dataName,
+                select : function (event, ui) {
+                    fetchRecords(ui.item.id).done(function (data)
+                    {
+                        var parent = div.find('tr').eq(eq);
+                        parent.find(' :input[name="code"]').val(data.id);
+                        parent.find(' :input[name="purchase_price"]').val(data.purchase_price);
+                        parent.find(' :input[name="quantity"]').focus();
+                    });
+                }
+            };
+            $( ':input[name="item_name"]' ).autocomplete({
+                source: data,
+                select : function (event, ui) {
+                    fetchRecords(ui.item.id).done(function (data)
+                    {
+                        var parent = div.find('tr').eq(eq);
+                        parent.find(' :input[name="code"]').val(data.id);
+                        parent.find(' :input[name="purchase_price"]').val(data.purchase_price);
+                        parent.find(' :input[name="quantity"]').focus();
+                    })
+                    ;            }
+            });
+        })
     
         div.on('click','#deleteRow',function (e) 
         {  
@@ -102,6 +119,7 @@ $(function () {
                     eq = eq + 1;
                     $('#records').append('<tr>' + parent.html());
                     $('#records').find(':input[name="item_name"]').eq(eq).focus();
+                    $('#records').find(':input[name="item_name"]').eq(eq).autocomplete(autocompleteoptions)
                     var parent = div.find('tr').eq(eq);
                     parent.find(' :input[name="code"]').val("");
                     parent.find(' :input[name="purchase_price"]').val("");

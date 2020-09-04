@@ -62,6 +62,7 @@
                             <th>الكميه</th>
                             <th>السعر</th>
                             <th>الاجمالي</th>
+                            <th>المخزن</th>
                             <th>حذف</th>
 
                         </tr>
@@ -78,18 +79,9 @@
                                     </div></td>
 
 
-                                <td><div class="form-row">
+                                    <td><div class="form-row">
                                         <div class="input-group">
-                                            <select class="input--style-5" name="item_name" required>
-                                                <option name="select" disabled="disabled">اختر صنف</option>
-
-                                                @foreach($items as $item)
-                                                    <option value="{{$item->id}}" @if ($item->id == $invoice->item->id) selected="selected" @endif>{{$item->name}}</option>
-                                                @endforeach
-
-                                            </select>
-                                            <div id="list">
-                                            </div>
+                                            <input class="input--style-5"id="item_name" value="{{$invoice->item->name}}" type="text" name="item_name" required>
                                         </div>
                                     </div></td>
 
@@ -111,7 +103,9 @@
                                         </div>
                                     </div></td>
 
+                                <td> <input type="text" value="{{$invoice->item->quantity}}" id="quantity_in_inventory" name="quantity_in_inventory"></td>
                                 <td>        <button type="button" id="deleteRow" class="fa fa-window-close"></button> </td>
+    
 
 
                             </tr>

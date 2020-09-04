@@ -36,7 +36,7 @@ $(function () {
 
     get(getBillnumber).done(function (data)
     {
-        billNumb = data['purchase_numb'];
+        billNumb = data['bill_numb'];
         var count = data['count'];
         $(':input[name="bill_numb"]').val(count);
     })
@@ -197,6 +197,8 @@ $(function () {
                 }
             )
         });
+
+        console.log(billNumb);
 
         var purchase =
             {

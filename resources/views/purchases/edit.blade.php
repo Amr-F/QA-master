@@ -78,18 +78,9 @@
                                 </div></td>
 
 
-                            <td><div class="form-row">
+                                <td><div class="form-row">
                                     <div class="input-group">
-                                        <select class="input--style-5" name="item_name" required>
-                                            <option name="select" disabled="disabled">اختر الصنف</option>
-
-                                            @foreach($items as $item)
-                                                <option value="{{$item->id}}" @if ($item->id == $bill->item->id) selected="selected" @endif>{{$item->name}}</option>
-                                            @endforeach
-
-                                        </select>
-                                        <div id="list">
-                                        </div>
+                                        <input class="input--style-5"id="item_name" value="{{$bill->item->name}}" type="text" name="item_name" required>
                                     </div>
                                 </div></td>
 

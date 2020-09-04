@@ -12,7 +12,7 @@ class SaleController extends Controller
 {
    public function __construct()
    {
-       $this->middleware('redirectunAuth',['except' => ['store','create','getInvoiceNumb','update','deleteInvoice','delete']]);
+       $this->middleware('redirectunAuth',['except' => ['store','create','getInvoiceNumb','update','deleteInvoice','getInvoices','delete']]);
    }
     public function create (Customer $customer , Sale $sale ,Item $item ){
         $item=Item::all()->sortBy('name');

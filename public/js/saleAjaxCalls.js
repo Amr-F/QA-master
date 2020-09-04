@@ -68,6 +68,7 @@ $(function () {
                     var parent = div.find('tr').eq(eq);
                     parent.find(' :input[name="code"]').val(data.id);
                     parent.find(' :input[name="sale_price"]').val(data.sale_price);
+                    parent.find(' :input[name="quantity_in_inventory"]').val(data.quantity);
                     parent.find(' :input[name="quantity"]').focus();
                 })
 ;            }
