@@ -62,7 +62,33 @@
                             </div>
                         </div>
                     </div>
+                    <table class="table">
+                        <thead>
+                        <tr>
 
+                            <th>النقدي</th>
+                            <th>علي الحساب</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+
+
+                        <tr>
+
+                            <td><div class="form-row">
+                                    <div class="input-group">
+                                        <input class="input--style-5" value="0" type="cash" id="cash" name="cash" required>
+                                    </div>
+                                </div></td>
+                            <td><div class="form-row">
+                                    <div class="input-group">
+                                        <input class="input--style-5" type="credit" value="0" id="credit" name="credit" required readonly>
+                                    </div>
+                                </div></td>
+                        </tr>
+
+                        </tbody>
+                    </table>
                     <div>
                         <div class="text-center mb-5">
                             <button class="btn btn--radius-2 btn--green" type="submit">عدل</button>
