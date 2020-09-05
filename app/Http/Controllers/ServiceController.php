@@ -21,15 +21,17 @@ class ServiceController extends Controller
 
     public function store(Request $request){
         $data = $request->all();
-        Service::create($data);
         $cash = intval($data['cash']);
         $name = ($data['name']);
         $customer_id =($data['customer_id']);
         $debit= ($data['credit']);
         $date= ($data['date']);
         $reason = 'Service ' . $name;
-        Cash::create(['debit' => $cash,'reason' => $reason]);
-        AccountReceivable::create( ['customer_id' => $customer_id , 'debit'=>$debit , 'credit'=> 0,'payment_date'=>$date ] );
+        $cash = Cash::create(['debit' => $cash,'reason' => $reason]);
+        $ar = AccountReceivable::create( ['customer_id' => $customer_id , 'debit'=>$debit , 'credit'=> 0,'payment_date'=>$date ] );
+        $data['cash_id'] = $cash->id;
+        $data['accountreceivables_id'] = $ar->id;
+        Service::create($data);
         return redirect('/services/create');
     }
 
@@ -60,7 +62,7 @@ class ServiceController extends Controller
     public function destroy($id){
 
         Service::find($id)->delete();
-        return redirect('/services/index');
+    return redirect('/services/index');
     }
 
 }
