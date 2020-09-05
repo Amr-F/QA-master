@@ -1,6 +1,7 @@
 @extends('layouts.sidebar')
 @extends('layouts.app')
 @section('content')
+<script src="/js/editService.js" defer></script>
 
 
     <div class="wrapper wrapper--w550">
@@ -20,7 +21,6 @@
                         <div class="value">
                             <div class="input-group">
                                <h3 class="input--style-5"  name="customer_name"   >{{ $service->customer->name }}</h3>
-
                             </div>
 
                         </div>
@@ -77,12 +77,12 @@
 
                             <td><div class="form-row">
                                     <div class="input-group">
-                                        <input class="input--style-5" value="0" type="cash" id="cash" name="cash" required>
+                                        <input class="input--style-5" value="{{$cash}}" type="cash" id="cash" name="cash" required>
                                     </div>
                                 </div></td>
                             <td><div class="form-row">
                                     <div class="input-group">
-                                        <input class="input--style-5" type="credit" value="0" id="credit" name="credit" required readonly>
+                                        <input class="input--style-5" type="credit" value="{{$ar}}" id="credit" name="credit" required >
                                     </div>
                                 </div></td>
                         </tr>

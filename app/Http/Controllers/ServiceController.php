@@ -46,17 +46,26 @@ class ServiceController extends Controller
 
     }
     public function edit (Service $service){
-        return view ('services.edit' , compact('service'));
+        $ar = $service->account_receivalbe->debit;
+        $cash = $service->cash->debit;
+        return view ('services.edit' , compact('service','ar','cash'));
     }
 
 
     public function update (Request $request){
         $data = $request->all();
-        $data['id'] = $request->route('id');
-        unset($data['_token']);
-        unset($data['_method']);
-        Service::where('id',$data['id'])->update($data);
-        return redirect('/services'.'/'.$data['id']);
+        $id = $request->route('id');
+        $service = Service::find($id);
+        $service->update($data);
+        $cash = intval($data['cash']);
+        $name = ($data['name']);
+        $reason = 'Service ' . $name;
+        $customer_id = $service->customer->id;
+        $debit= ($data['credit']);
+        $date= ($data['date']);
+        $service->cash()->update(['debit' => $cash,'reason' => $reason]);
+        $service->account_receivalbe()->update(['customer_id' => $customer_id , 'debit'=>$debit ,'payment_date'=>$date ]);
+        return redirect('/services'.'/'.$id);
     }
 
     public function destroy($id){
