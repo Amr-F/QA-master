@@ -44,7 +44,7 @@
                     <div class="name">المبلغ</div>
                     <div class="value">
                         <div class="input-group">
-                            <input class="input--style-5" type="number" name="amount"value="{{$expense->amount}}" required>
+                            <input class="input--style-5" type="text" name="amount"value="{{$expense->amount}}" required>
 
                         </div>
                     </div>

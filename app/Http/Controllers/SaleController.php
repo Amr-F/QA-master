@@ -49,10 +49,19 @@ class SaleController extends Controller
     }
     public function index(){
         $counter = 0;
-        $sales = Sale::all();
+        $sales = Sale::all()->sortByDesc('created_at');
         return view('/sales/index',compact('sales','counter'));
     }
+    public function index_by_date(Request $request){
+        $counter = 0;
+        $startDate = $request['start_date'];
+        $endDate = $request['end_date'];
 
+        $sales = Sale::whereDate('invoice_date', '>=',$startDate)
+            ->whereDate('invoice_date', '<=',$endDate)->get();
+
+        return view('/sales/index',compact('sales','counter'));
+    }
 
     public function edit ($id)
     {

@@ -4,10 +4,15 @@
 
 @section('content')
 
+    <div class="text-right mb-5">
+        <button type="button"  onclick="window.location.href='/sales/index_by_date';"
+                class="btn btn-success">عرض فواتير المبيعات حسب تاريخ معين</button>
+
+
+    </div>
 
 
 
-</div>
 <div class="wrapper-pur wrapper--w960">
     <div class="card card-5">
         <div class="card-heading">
@@ -31,7 +36,7 @@
                 <tbody>
                 @foreach ($sales as $sale)
                     <tr>
-                        <td> <a href='/sales/{{$sale->id}}' >{{$counter += 1}}</td>
+                        <td> <a href='/sales/{{$sale->id}}' >{{$sale->id}}</td>
                         <td>{{$sale->created_at}}</td>
                         <td>{{$sale->customer->name}}</td>
                         <td>{{$sale->total}}</td>

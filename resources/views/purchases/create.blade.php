@@ -67,10 +67,11 @@
                         <thead>
                         <tr>
                             <th>الكود</th>
-                            <th>الاسم</th>
-                            <th>الكميه</th>
-                            <th>السعر</th>
-                            <th>الاجملي</th>
+                            <th>الصنـــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــف</th>
+                            <th>الكميـــــــه</th>
+                            <th>السعــــــــر</th>
+                            <th>الاجمالــــــي</th>
+
                             <th>حذف</th>
                         </tr>
                         </thead>
@@ -154,7 +155,7 @@
                                 </div></td>
                             <td><div class="form-row">
                                     <div class="input-group">
-                                        <input class="input--style-5" type="credit" name="credit" required>
+                                        <input class="input--style-5" type="credit" value="0" name="credit" required readonly>
                                     </div>
                                 </div></td>
                         </tr>

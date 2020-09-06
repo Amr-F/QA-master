@@ -17,7 +17,7 @@
 
 
                     <div class="form-row">
-                        <div class="name">النقض</div>
+                        <div class="name">النقدي</div>
                         <div class="value">
                             <div class="input-group">
                                 <input class="input--style-5"  name="amount" value="{{$total}}" required>

@@ -61,7 +61,7 @@
                         <div class="name">سعر الخدمه</div>
                         <div class="value">
                             <div class="input-group">
-                                <input class="input--style-5" type="number" id="service_price" name="service_price" required>
+                                <input class="input--style-5" type="text" id="service_price" name="service_price" required>
 
                             </div>
                         </div>
@@ -70,7 +70,7 @@
                         <div class="name">تكلفه الخدمه </div>
                         <div class="value">
                             <div class="input-group">
-                                <input class="input--style-5" value="0" type="number" name="service_cost" required>
+                                <input class="input--style-5" value="0" type="text" name="service_cost" required>
 
                             </div>
                         </div>

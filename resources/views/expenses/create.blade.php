@@ -20,7 +20,7 @@
                 <form method="POST" action="/expenses">
                     @csrf
                     <div class="form-row">
-                        <div class="name">السم المصروف</div>
+                        <div class="name">نوع المصروف</div>
                         <div class="value">
                             <div class="input-group">
 
@@ -51,7 +51,7 @@
                         <div class="name">المبلغ</div>
                         <div class="value">
                             <div class="input-group">
-                                <input class="input--style-5" type="number" name="amount" required>
+                                <input class="input--style-5" type="text" name="amount" required>
 
                             </div>
                         </div>

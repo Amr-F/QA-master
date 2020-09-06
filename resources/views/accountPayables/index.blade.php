@@ -24,7 +24,7 @@
                     <tr>
 
                         <th>اسم المورد</th>
-                        <th>الكم</th>
+                        <th>المبلغ</th>
 
 
                     </tr>
@@ -42,7 +42,7 @@
 
                     </tbody>
                 </table>
-                <div class="text-center mb-5"> <h1> الجمالي = {{$totalap}}
+                <div class="text-center mb-5"> <h1> الاجمالي = {{$totalap}}
                     </h1>
                 </div>
 

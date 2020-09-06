@@ -39,7 +39,7 @@
                         <div class="name">التاريخ</div>
                         <div class="value">
                             <div class="input-group">
-                                <input class="input--style-5" name="date" value="{{$service -> date}}" required>
+                                <input class="input--style-5" type="date" name="date" value="{{$service -> date}}" required>
 
                             </div>
                         </div>

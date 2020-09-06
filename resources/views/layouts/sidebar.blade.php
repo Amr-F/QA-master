@@ -1,9 +1,17 @@
-<aside class="sidebar-left-collapse">
+<style media="screen">
+    .noPrint{ display: block; }
+    .yesPrint{ display: block !important; }
+</style>
+<style media="print">
+    .noPrint{ display: none; }
+    .yesPrint{ display: block !important; }
+</style>
+<aside  class=" sidebar-left-collapse noPrint">
     <link rel="stylesheet" type="text/css" href="/vendor/font-awesome-4.7/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="/vendor/mdi-font/css/material-design-iconic-font.css">
 
 
-    <div class="text-center mb-5">
+    <div  class="text-center mb-5 ">
     <img src="/images/icons/logo.jpg"  width="180" height="180">
     </div>
     <div class="sidebar-links">
@@ -85,7 +93,8 @@
             <ul class="sub-links">
                 <li><a href="/cash/index">تقارير الخذانه</a></li>
                 <li><a href="/cash/create">اضافه تمويل</a></li>
-                <li><a href="/quickReports/dayclosse">انهاء اليوم</a></li>
+                <li><a href="#">انهاء اليوم</a></li>
+{{--                <li><a href="/quickReports/dayclosse">انهاء اليوم</a></li>--}}
             </ul>
 
         </div>

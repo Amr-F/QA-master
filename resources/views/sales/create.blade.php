@@ -1,3 +1,4 @@
+
 <link rel="stylesheet" href="/css/jquery-ui.css">
 @extends('layouts.sidebar')
 @extends('layouts.app')
@@ -8,7 +9,7 @@
 @section('content')
 
 
-    <div class="text-right mb-5">
+    <div class="text-right mb-5 noPrint">
         <button type="button"  onclick="window.location.href='/sales/index';"
                 class="btn btn-success">عرض جميع فواتير المبيعات</button>
 
@@ -18,7 +19,7 @@
     <div id="app" class="wrapper-pur wrapper--w960">
         <div class="card card-5">
             <div class="card-heading">
-                <h2 class="title">عمل فاتورة مبيعات</h2>
+                <h2 class="title"> فاتورة مبيعات</h2>
 
             </div>
             <div   class="card-body">
@@ -68,10 +69,10 @@
                         <tr>
                             <th>الكود</th>
                             <th>الصنـــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــف</th>
-                            <th>الكميـــه</th>
+                            <th>الكميـــــــه</th>
                             <th>السعــــــــر</th>
                             <th>الاجمالــــــي</th>
-                            <th>المخزن</th>
+                            <th class="noPrint">المخزن</th>
                             <th>حذف</th>
                         </tr>
                         </thead>
@@ -123,8 +124,8 @@
                                         <input class="input--style-5" id="total" type="total" name="total" required>
                                     </div>
                                 </div></td>
-                            <td> <input type="text" value="0" id="quantity_in_inventory" name="quantity_in_inventory"></td>
-                            <td>        <button type="button" id="deleteRow" class="fa fa-window-close"></button> </td>
+                            <td> <input class="noPrint" type="text" value="0" id="quantity_in_inventory" name="quantity_in_inventory"></td>
+                            <td>        <button type="button" id="deleteRow" class="noPrint fa fa-window-close"></button> </td>
 
 
                         </tr>
@@ -164,8 +165,8 @@
                         </tbody>
                     </table>
                     <div>
-                        <div class="text-center mb-5">
-                            <button id="submit" class="btn btn--radius-2 btn--green">اضف الفاتوره</button>
+                        <div class="text-center mb-5 noPrint" >
+                            <button id="submit" class=" btn btn--radius-2 btn--green ">اضف الفاتوره</button>
                         </div>
                     </div>
                 </form>
