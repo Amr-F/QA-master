@@ -83,6 +83,10 @@ Route::get('/purchases/{id}','PurchaseController@show');
 Route::get('/sales/create' , 'SaleController@create');
 Route::post('/sales' , 'SaleController@store');
 Route::get('/sales/index' , 'SaleController@index');
+Route::get('/sales/index_by_date', function () {
+    return view('/sales/index_by_date');
+});
+Route::post('/sales/index_by_date_f' , 'SaleController@index_by_date');
 Route::get('/sales/{invoice}/edit','SaleController@edit');
 Route::get('/sales/{id}','SaleController@show');
 

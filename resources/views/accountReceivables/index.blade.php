@@ -43,7 +43,7 @@
                     </tbody>
                 </table>
 
-                <div class="text-center mb-5"> <h1> الجمالي = {{$totalar}}
+                <div class="text-center mb-5"> <h1> الاجمالي = {{$totalar}}
                     </h1>
                 </div>
 

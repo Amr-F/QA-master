@@ -40,7 +40,7 @@
                             </div>
                         </div>
                         <div class="form-row">
-                            <div class="name">الكم</div>
+                            <div class="name">المبلغ</div>
                             <div class="value">
                                 <div class="input-group">
                                     <input class="input--style-5"  name="amount" required >

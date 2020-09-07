@@ -14,14 +14,14 @@
     <title>Quantum Account</title>
 
     <!-- Scripts -->
-    {{-- <script src="{{ asset('js/app.js') }}" defer></script> --}}
+     <script src="{{ asset('js/app.js') }}" defer></script>
     <script src="{{asset('js/jquery.min.js')}}"></script>
     <script src="{{asset('js/jqueryi-migrate.js')}}" defer></script>
     <script src="{{asset('js/Jquery-ui.js')}}" defer></script>
-    
+
     <!-- Fonts -->
     <link rel="dns-prefetch" href="/fonts.gstatic.com">
-   
+
 
 
     <!-- Styles -->

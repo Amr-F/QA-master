@@ -46,7 +46,7 @@
 
                     <div>
                         <div class="text-center mb-5">
-                            <button class="btn btn--radius-2 btn--green" type="submit">عددل</button>
+                            <button class="btn btn--radius-2 btn--green" type="submit">عدل</button>
                         </div>
                     </div>
                 </form>

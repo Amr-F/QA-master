@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="/css/jquery-ui.css">
 @extends('layouts.sidebar')
 @extends('layouts.app')
 <script src="/js/jquery.min.js"></script>
@@ -58,10 +59,11 @@
                         <thead>
                         <tr>
                             <th>الكود</th>
-                            <th>الاسم</th>
-                            <th>الكميه</th>
-                            <th>السعر</th>
-                            <th>الاجمالي</th>
+                            <th>الصنـــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــف</th>
+                            <th>الكميـــــــه</th>
+                            <th>السعــــــــر</th>
+                            <th>الاجمالــــــي</th>
+
                             <th>حذف</th>
 
                         </tr>

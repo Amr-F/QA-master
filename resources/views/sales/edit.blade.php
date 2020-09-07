@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="/css/jquery-ui.css">
 @extends('layouts.sidebar')
 @extends('layouts.app')
 <script src="/js/jquery.min.js"></script>
@@ -58,11 +59,11 @@
                         <thead>
                         <tr>
                             <th>الكود</th>
-                            <th>الصنف</th>
-                            <th>الكميه</th>
-                            <th>السعر</th>
-                            <th>الاجمالي</th>
-                            <th>المخزن</th>
+                            <th>الصنـــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــف</th>
+                            <th>الكميـــــــه</th>
+                            <th>السعــــــــر</th>
+                            <th>الاجمالــــــي</th>
+                            <th class="noPrint">المخزن</th>
                             <th>حذف</th>
 
                         </tr>
@@ -105,7 +106,7 @@
 
                                 <td> <input type="text" value="{{$invoice->item->quantity}}" id="quantity_in_inventory" name="quantity_in_inventory"></td>
                                 <td>        <button type="button" id="deleteRow" class="fa fa-window-close"></button> </td>
-    
+
 
 
                             </tr>
