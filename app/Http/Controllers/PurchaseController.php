@@ -14,7 +14,7 @@ class PurchaseController extends Controller
 {
    public function __construct()
    {
-       $this->middleware('redirectunAuth',['except' => ['getBillNumb','store','update']]);
+       $this->middleware('redirectunAuth',['except' => ['getBillNumb','store','update','delete']]);
    }
     public function create (Supplier $supplier , Purchase $purchase ,Item $item ){
         $item=Item::all()->sortBy('name');
