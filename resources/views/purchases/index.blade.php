@@ -6,6 +6,10 @@
 
 
 
+    <div class="text-right mb-5">
+        <button type="button"  onclick="window.location.href='/purchases/index_by_date';"
+                class="btn btn-success">عرض فواتير المشتريات حسب تاريخ معين</button>
+
 
     </div>
     <div class="wrapper-pur wrapper--w960">
@@ -33,7 +37,7 @@
 
                         @foreach ($purchases as $purchase)
                         <tr>
-                            <td> <a href='/purchases/{{$purchase->id}}' >{{$counter += 1}}</td>
+                            <td> <a href='/purchases/{{$purchase->id}}' >{{$purchase->id}}</td>
                             <td>{{$purchase->bill_date}}</td>
                             <td>{{$purchase->supplier->name}}</td>
                             <td>{{$purchase->total}}</td>
@@ -43,6 +47,12 @@
                     </tbody>
 
                 </table>
+
+                <div class="row">
+                    <div class="col-12 text-center">
+                        {{ $purchases->links() }}
+                    </div>
+                </div>
 
 
 

@@ -28,13 +28,13 @@
                 </tr>
                 </thead>
                 <tbody>
-                @foreach($cash as $cash)
+                @foreach($cash as $cashh)
                     <tr>
-                        <td><a href="/cash/{{$cash->id}}" >{{ $cash->id }}</a></td>
-                        <td>{{$cash -> reason}}  </td>
-                        <td>{{$cash -> updated_at}}  </td>
-                        <td>{{$cash -> debit }}  </td>
-                        <td>{{$cash -> credit}}  </td>
+                        <td><a href="/cash/{{$cashh->id}}" >{{ $cashh->id }}</a></td>
+                        <td>{{$cashh -> reason}}  </td>
+                        <td>{{$cashh -> updated_at}}  </td>
+                        <td>{{$cashh -> debit }}  </td>
+                        <td>{{$cashh -> credit}}  </td>
 
 
                     </tr>
@@ -43,6 +43,12 @@
 
                 </tbody>
             </table>
+
+            <div class="row">
+                <div class="col-12 text-center">
+                    {{ $cash->links() }}
+                </div>
+            </div>
 
 
 

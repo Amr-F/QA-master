@@ -32,6 +32,8 @@
                     </thead>
                     <tbody>
                     @foreach($accountPaybale as $accountPaybale)
+                        @if($accountPaybale -> debit==0 && $accountPaybale ->credit==0)
+                        @else
                     <tr>
                         <td> <a href='/accountPayables/{{$accountPaybale->id}}/edit' > {{$accountPaybale ->id }}</a></td>
                         <td>{{$accountPaybale->payment_date}}  </td>
@@ -39,6 +41,7 @@
                         <td>{{$accountPaybale ->credit}}  </td>
 
                     </tr>
+                        @endif
                     @endforeach
 
                     </tbody>

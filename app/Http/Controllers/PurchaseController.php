@@ -50,9 +50,19 @@ class PurchaseController extends Controller
 
     public function index(){
 
-        $purchases = Purchase::all();
+        $purchases = Purchase::orderBy('created_at', 'desc')->paginate(10);
         $counter = 0;
         return view('/purchases/index',compact('purchases','counter'));
+    }
+    public function index_by_date(Request $request){
+
+        $startDate = $request['start_date'];
+        $endDate = $request['end_date'];
+
+        $purchases = Purchase::whereDate('bill_date', '>=',$startDate)
+            ->whereDate('bill_date', '<=',$endDate)->get();
+
+        return view('/purchases/index',compact('purchases'));
     }
 
     public function edit ($id)

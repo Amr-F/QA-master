@@ -49,7 +49,7 @@ class SaleController extends Controller
     }
     public function index(){
         $counter = 0;
-        $sales = Sale::all()->sortByDesc('created_at');
+        $sales = Sale::orderBy('created_at', 'desc')->paginate(10);
         return view('/sales/index',compact('sales','counter'));
     }
     public function index_by_date(Request $request){

@@ -73,8 +73,13 @@ Route::post('/autocomplete/fetch', 'ItemController@fetch')->name('autocomplete.f
 Route::get('/purchases/create' , 'PurchaseController@create');
 Route::post('/purchases' , 'PurchaseController@store');
 Route::get('/purchases/index' , 'PurchaseController@index');
+Route::get('/purchases/index_by_date', function () {
+    return view('/purchases/index_by_date');
+});
+Route::post('/purchases/index_by_date_f' , 'PurchaseController@index_by_date');
 Route::get('/purchases/{bill}/edit','PurchaseController@edit');
 Route::get('/purchases/{id}','PurchaseController@show');
+
 /*
 |--------------------------------------------------------------------------
 | sales Routes

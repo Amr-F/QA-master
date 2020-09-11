@@ -29,10 +29,10 @@
                     </tr>
                     </thead>
                     <tbody>
-                    @foreach($supplier as $supplier)
+                    @foreach($supplier as $suppliers)
                         <tr>
-                            <td><a href="/suppliers/{{$supplier->id}}" >{{ $supplier -> name}}</a></td>
-                            <td>{{$supplier -> phone}}  </td>
+                            <td><a href="/suppliers/{{$suppliers->id}}" >{{ $suppliers -> name}}</a></td>
+                            <td>{{$suppliers -> phone}}  </td>
 
 
                         </tr>
@@ -40,6 +40,11 @@
                     @endforeach
                     </tbody>
                 </table>
+                <div class="row">
+                    <div class="col-12 text-center">
+                        {{ $supplier->links() }}
+                    </div>
+                </div>
 
 
 

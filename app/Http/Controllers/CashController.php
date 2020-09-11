@@ -13,8 +13,8 @@ class CashController extends Controller
     }
 
     public function index(){
-
-        return view('cash.index',['cash'=> Cash::all()]);
+        $cash= Cash::orderBy('created_at', 'desc')->paginate(10);
+        return view('cash.index',compact('cash'));
     }
 
     public function show(Cash $cash)

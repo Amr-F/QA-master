@@ -36,8 +36,8 @@ class ServiceController extends Controller
     }
 
     public function index(){
-
-        return view('services.index',['service'=> Service::all()]);
+        $service=Service::orderBy('created_at', 'desc')->paginate(10);
+        return view('services.index',compact('service'));
     }
 
     public function show(Service $service)

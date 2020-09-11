@@ -45,11 +45,15 @@
 
                 </tbody>
             </table>
-
+          <div class="row">
+            <div class="col-12 text-center">
+                {{ $sales->links() }}
+            </div>
+        </div>
 
 
         </div>
     </div>
-</div>
+
 </div>
 @endsection

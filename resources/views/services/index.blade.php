@@ -25,19 +25,19 @@
                     <th>اسم الخدمه</th>
                     <th>التاريخ</th>
                     <th>السعر</th>
-                    
+
 
                 </tr>
                 </thead>
                 <tbody>
-                @foreach($service as $service)
+                @foreach($service as $services)
                     <tr>
-                        <td><a href="/services/{{$service->id}}" >{{ $service->customer->name }}</a></td>
-			<td>{{$service -> customer->phone}}  </td>
-                        <td>{{$service -> name}}  </td>
-                        <td>{{$service -> date}}  </td>
-                        <td>{{$service -> service_price }}  </td>
-                        
+                        <td><a href="/services/{{$services->id}}" >{{ $services->customer->name }}</a></td>
+			<td>{{$services -> customer->phone}}  </td>
+                        <td>{{$services -> name}}  </td>
+                        <td>{{$services -> date}}  </td>
+                        <td>{{$services -> service_price }}  </td>
+
 
 
                     </tr>
@@ -46,7 +46,11 @@
 
                 </tbody>
             </table>
-
+            <div class="row">
+            <div class="col-12 text-center">
+                {{ $service->links() }}
+            </div>
+        </div>
 
 
         </div>

@@ -27,12 +27,12 @@
                 </tr>
                 </thead>
                 <tbody>
-                @foreach($expense as $expense)
+                @foreach($expense as $expenses)
                     <tr>
-                        <td><a href="/expenses/{{$expense->id}}" >{{ $expense->expcategory->exp_name }}</a></td>
+                        <td><a href="/expenses/{{$expenses->id}}" >{{ $expenses->expcategory->exp_name }}</a></td>
 
-                        <td>{{$expense -> date}}  </td>
-                        <td>{{$expense -> amount }}  </td>
+                        <td>{{$expenses -> date}}  </td>
+                        <td>{{$expenses -> amount }}  </td>
 
 
 
@@ -43,6 +43,11 @@
                 </tbody>
             </table>
 
+            <div class="row">
+                <div class="col-12 text-center">
+                    {{ $expense->links() }}
+                </div>
+            </div>
 
 
         </div>

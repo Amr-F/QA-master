@@ -29,10 +29,10 @@
                     </tr>
                     </thead>
                     <tbody>
-                    @foreach($customer as $customer)
+                    @foreach($customer as $customers)
                         <tr>
-                            <td><a href="/customers/{{$customer->id}}" >{{ $customer -> name}}</a></td>
-                            <td>{{$customer -> phone}}  </td>
+                            <td><a href="/customers/{{$customers->id}}" >{{ $customers -> name}}</a></td>
+                            <td>{{$customers -> phone}}  </td>
 
 
                         </tr>
@@ -40,11 +40,20 @@
                     @endforeach
                     </tbody>
                 </table>
+                <div class="row">
+                    <div class="col-12 text-center">
+                        {{ $customer->links() }}
+                    </div>
+                </div>
 
 
 
             </div>
         </div>
     </div>
-    </div>
+
+
+
+
+
 @endsection

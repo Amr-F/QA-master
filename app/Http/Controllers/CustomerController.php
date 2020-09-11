@@ -38,8 +38,8 @@ class CustomerController extends Controller
         return $errors;
     }
     public function index(){
-
-        return view('customers.index',['customer'=> Customer::all()]);
+        $customer= Customer::paginate(10);
+        return view('customers.index',compact('customer'));
     }
 
 

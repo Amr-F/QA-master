@@ -26,8 +26,8 @@ class ExpensesController extends Controller
 
 
     public function index(){
-
-        return view('expenses.index',['expense'=> Expenses::all()]);
+    $expense= Expenses::orderBy('created_at', 'desc')->paginate(10);
+        return view('expenses.index',compact('expense'));
     }
 
     public function show(Expenses $expense)

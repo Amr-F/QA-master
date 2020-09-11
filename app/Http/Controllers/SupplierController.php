@@ -15,8 +15,8 @@ class SupplierController extends Controller
     }
 
     public function index(){
-
-        return view('suppliers.index',['supplier'=> \DB::table('suppliers')->paginate(10)]);
+        $supplier= Supplier::paginate(10);
+        return view('suppliers.index',compact('supplier'));
     }
 
 

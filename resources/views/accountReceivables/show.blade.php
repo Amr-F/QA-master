@@ -32,13 +32,15 @@
                     </thead>
                     <tbody>
                     @foreach($accountReceivable as $accountReceivable)
+                        @if($accountReceivable -> debit==0 && $accountReceivable ->credit==0)
+                        @else
                         <tr>
-                            <td> <a href='/accountReceivables/{{$accountReceivable->id}}/edit' > {{$accountReceivable ->id }}</a></td>
-                            <td>{{$accountReceivable->payment_date}}  </td>
-                            <td>{{$accountReceivable -> debit}}  </td>
-                            <td>{{$accountReceivable ->credit}}  </td>
-
+                            <td><a href='/accountReceivables/{{$accountReceivable->id}}/edit'>{{$accountReceivable ->id }}</a></td>
+                            <td>{{$accountReceivable->payment_date}}</td>
+                            <td>{{$accountReceivable -> debit}}</td>
+                            <td>{{$accountReceivable ->credit}}</td>
                         </tr>
+                        @endif
                     @endforeach
 
                     </tbody>
