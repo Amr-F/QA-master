@@ -30,21 +30,25 @@
                     </tr>
                     </thead>
                     <tbody>
-                    @foreach($item as $item)
+                    @foreach($item as $items)
                         <tr>
-                            <td><a href="/items/{{$item->id}}" >{{ $item -> id}}</a></td>
-                            <td>{{$item -> name}}  </td>
-                            <td>{{$item -> sale_price}}  </td>
-                            <td>{{$item -> purchase_price}}  </td>
-                            <td>{{$item -> quantity}}  </td>
-                            <td>{{($item -> quantity)*($item -> purchase_price)}}  </td>
+                            <td><a href="/items/{{$items->id}}" >{{ $items -> id}}</a></td>
+                            <td>{{$items -> name}}  </td>
+                            <td>{{$items -> sale_price}}  </td>
+                            <td>{{$items -> purchase_price}}  </td>
+                            <td>{{$items -> quantity}}  </td>
+                            <td>{{($items -> quantity)*($items -> purchase_price)}}  </td>
                         </tr>
 
                     @endforeach
                     </tbody>
                 </table>
 
-
+                <div class="row">
+                    <div class="col-12 text-center">
+                        {{ $item->links() }}
+                    </div>
+                </div>
 
             </div>
         </div>

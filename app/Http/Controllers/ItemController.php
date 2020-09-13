@@ -45,12 +45,14 @@ class ItemController extends Controller
     {
         //Auth::guard('web')->user()->id;
 
+
+
             if ($sort == 1 ){
-                return view('items.index', ['item' => Item::all()->sortBy('name')]);}
+                return view('items.index', ['item' => Item::orderBy('name')->paginate(10)]);}
             elseif ($sort== 2){
-                return view('items.index', ['item' => Item::all()->sortBy('id')]);}
+                return view('items.index', ['item' => Item::orderBy('id')->paginate(10)]);}
             elseif ($sort==3){
-                return view('items.index', ['item' => Item::all()->sortBy('quantity')]);}
+                return view('items.index', ['item' => Item::orderBy('quantity')->paginate(10)]);}
 
 
 

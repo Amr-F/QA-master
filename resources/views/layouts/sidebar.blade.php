@@ -93,7 +93,7 @@
             <ul class="sub-links">
                 <li><a href="/cash/index">تقارير الخذانه</a></li>
                 <li><a href="/cash/create">اضافه تمويل</a></li>
-                <li><a href="#">انهاء اليوم</a></li>
+{{--                <li><a href="#">انهاء اليوم</a></li>--}}
 {{--                <li><a href="/quickReports/dayclosse">انهاء اليوم</a></li>--}}
             </ul>
 

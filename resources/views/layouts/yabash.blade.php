@@ -7,7 +7,7 @@
 
 
 
-</div>
+
 <div class="wrapper wrapper--w550">
     <div class="card card-5">
         <div class="card-heading">
@@ -24,5 +24,5 @@
         </div>
     </div>
 </div>
-</div>
+
 @endsection
