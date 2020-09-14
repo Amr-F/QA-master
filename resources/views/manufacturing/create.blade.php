@@ -51,7 +51,7 @@
                         <div class="name">PRODUCT ID </div>
                         <div class="value">
                             <div class="input-group">
-                                <input class="input--style-5" type="text" name="product_id" readonly>
+                                <input class="input--style-5" type="text" name="product_id" required>
                             </div>
                         </div>
                     </div>
@@ -59,7 +59,7 @@
                         <div class="name">PRODUCT NAME </div>
                         <div class="value">
                             <div class="input-group">
-                                <input class="input--style-5" type="text" name="product_name" readonly>
+                                <input class="input--style-5" type="text" name="product_name" required>
                             </div>
                         </div>
                     </div>
@@ -67,7 +67,7 @@
                         <div class="name">QUANTITY </div>
                         <div class="value">
                             <div class="input-group">
-                                <input class="input--style-5" type="text" name="product_quantity" readonly>
+                                <input class="input--style-5" type="text" name="product_quantity" required>
                             </div>
                         </div>
                     </div>
