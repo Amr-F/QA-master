@@ -7,22 +7,44 @@
 
 
 
+    <div id="app" class="wrapper-pur wrapper--w960">
+        <div class="card card-5">
+            <div class="card-heading">
+                <h2 class="title">وصول سريع</h2>
 
-<div class="wrapper wrapper--w550">
-    <div class="card card-5">
-        <div class="card-heading">
-            <h2 class="title">معلش</h2>
+            </div>
 
-        </div>
-        <div class="card-body">
-
-
-            <img src="/images/yabasha.jpg" width="400" height="345">
+            <div   class="card-body">
+                @if (Auth::guard('web')->user()->id == 1)
 
 
+                    <div class="text-xl-center mb-5 noPrint">
+                        <button type="button" onclick="window.location.href='/items/sortitem';" class="btn btn-success">المخزون</button>
+                        <button type="button" onclick="window.location.href='/customers/index';" class="btn btn-success">العملاء</button>
+                        <button type="button" onclick="window.location.href='/sales/create';" class="btn btn-success">فواتير المبيعات</button>
+                        <button type="button" onclick="window.location.href='/accountReceivables/index';" class="btn btn-success">حسابات العملاء</button>
+                    </div>
+                    <div class="text-xl-center mb-5 noPrint">
+                        <button type="button" onclick="window.location.href='/services/create';" class="btn btn-success">الخدمات</button>
+                        <button type="button" onclick="window.location.href='/suppliers/index';" class="btn btn-success">موردين</button>
+                        <button type="button" onclick="window.location.href='/purchases/create';" class="btn btn-success">فواتير المشتريات</button>
+                        <button type="button" onclick="window.location.href='/accountPayables/index';" class="btn btn-success">حسابات موردين</button>
+                    </div>
 
+                    <div class="text-xl-center mb-5 noPrint">
+                        <button type="button" onclick="window.location.href='/expenses/create';" class="btn btn-success">المصاريف</button>
+                        <button type="button" onclick="window.location.href='/cash/index';" class="btn btn-success">تقارير الخذانه</button>
+
+                    </div>
+                @else
+                    <div class="text-xl-center mb-5 noPrint">
+
+                        <button type="button" onclick="window.location.href='/sales/create';" class="btn btn-success">فواتير المبيعات</button>
+                        <button type="button" onclick="window.location.href='/services/create';" class="btn btn-success">الخدمات</button>
+                    </div>
+                @endif
+            </div>
         </div>
     </div>
-</div>
 
 @endsection

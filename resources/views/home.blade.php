@@ -29,7 +29,9 @@
                 <h2 class="title">وصول سريع</h2>
 
             </div>
+
             <div   class="card-body">
+                @if (Auth::guard('web')->user()->id == 1)
 
 
                 <div class="text-xl-center mb-5 noPrint">
@@ -50,6 +52,13 @@
                     <button type="button" onclick="window.location.href='/cash/index';" class="btn btn-success">تقارير الخذانه</button>
 
                 </div>
+                @else
+                    <div class="text-xl-center mb-5 noPrint">
+
+                        <button type="button" onclick="window.location.href='/sales/create';" class="btn btn-success">فواتير المبيعات</button>
+                        <button type="button" onclick="window.location.href='/services/create';" class="btn btn-success">الخدمات</button>
+                    </div>
+                @endif
             </div>
         </div>
     </div>

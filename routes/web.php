@@ -193,3 +193,13 @@ Route::post('/quickReports','ReportController@show');
 
 Route::get('/quickReports/dayclosse' , 'DaycloseController@show');
 Route::post('/quickReports/dayclosse' , 'DaycloseController@store');
+
+/*
+|--------------------------------------------------------------------------
+| manufacturing Routes
+|--------------------------------------------------------------------------
+ */
+
+Route::get('manufacturing/create', function () {
+    return view('/manufacturing/create');
+});
