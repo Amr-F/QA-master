@@ -18,7 +18,7 @@ class AccountPayable extends Model
     {
         $debit = AccountPayable::all()->sum('debit');
         $credit = AccountPayable::all()->sum('credit');
-        $total = $debit - $credit;
+        $total =  $credit- $debit;
         return $total;
     }
 }

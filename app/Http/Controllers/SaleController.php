@@ -60,7 +60,7 @@ class SaleController extends Controller
         $sales = Sale::whereDate('invoice_date', '>=',$startDate)
             ->whereDate('invoice_date', '<=',$endDate)->get();
 
-        return view('/sales/index',compact('sales','counter'));
+        return view('/sales/index_by_date_f',compact('sales','counter'));
     }
 
     public function edit ($id)
