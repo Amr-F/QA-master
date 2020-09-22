@@ -44,11 +44,11 @@
                     </tbody>
                 </table>
 
-                <div class="row">
-                    <div class="col-12 text-center">
-                        {{ $item->links() }}
-                    </div>
-                </div>
+{{--                <div class="row">--}}
+{{--                    <div class="col-12 text-center">--}}
+{{--                        {{ $item->links() }}--}}
+{{--                    </div>--}}
+{{--                </div>--}}
 
             </div>
         </div>

@@ -16,7 +16,7 @@
 
 
             <div class="form-row">
-                <div class="name">النقض</div>
+                <div class="name">النقدي</div>
                 <div class="value">
                     <div class="input-group">
                         <input class="input--style-5" value="{{$cash}}" type="name" name="cash" readonly>
@@ -53,8 +53,18 @@
                     </div>
                 </div>
             </div>
+
             <div class="form-row">
-                <div class="name"> ارباع من المبيعات </div>
+                <div class="name">اجمالي رائس المال </div>
+                <div class="value">
+                    <div class="input-group">
+                        <input class="input--style-5" value="{{$total_capital}}" type="name" name="ar" readonly>
+
+                    </div>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="name"> ارباح من المبيعات </div>
                 <div class="value">
                     <div class="input-group">
                         <input class="input--style-5" type="name" value="{{$income_from_sale}}" name="income" readonly>

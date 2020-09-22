@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Expenses extends Model
 {
 
-    protected $fillable = ['date','amount','expense_id'];
+    protected $fillable = ['date','amount','expense_id','cash_id'];
 
 
     public function expcategory(){
@@ -20,6 +20,9 @@ class Expenses extends Model
         $expense = Expenses::whereDate('date', '>=',$firstDate)
         ->whereDate('date', '<=',$secondDate)
         ->get()->sum('amount');
-        return $expense;   
+        return $expense;
+    }
+    public function cash(){
+        return $this->belongsTo(Cash::class,'cash_id');
     }
 }

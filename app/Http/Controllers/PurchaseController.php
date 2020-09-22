@@ -62,7 +62,7 @@ class PurchaseController extends Controller
         $purchases = Purchase::whereDate('bill_date', '>=',$startDate)
             ->whereDate('bill_date', '<=',$endDate)->get();
 
-        return view('/purchases/index',compact('purchases'));
+        return view('/purchases/index_by_date_f',compact('purchases'));
     }
 
     public function edit ($id)

@@ -16,7 +16,8 @@
     <div class="wrapper-pur wrapper--w960">
         <div class="card card-5">
             <div class="card-heading">
-                <h2 class="title">جميع فواتير المبيعات</h2>
+                <h2 class="title">عرض فواتير المبيعات حسب تاريخ معين</h2>
+
 
             </div>
             <div class="card-body">

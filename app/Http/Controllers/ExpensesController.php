@@ -18,9 +18,11 @@ class ExpensesController extends Controller
     }
     public function store(Request $request){
         $data = $request->all();
-        Expenses::create($data);
         $reason = 'paid '.$data['amount'];
-        Cash::create(['credit' => $data['amount'],'reason' => $reason]);
+        $cash= Cash::create(['credit' => $data['amount'],'reason' => $reason]);
+        $cash_id = $cash->id;
+        $data['cash_id'] = $cash_id;
+        Expenses::create($data);
         return redirect('/expenses/create');
     }
 
@@ -41,16 +43,21 @@ class ExpensesController extends Controller
 
     public function update (Request $request){
         $data = $request->all();
+
         $data['id'] = $request->route('id');
+        $exp= Expenses::where('id', '=', $data['id'])->firstOrFail();
         unset($data['_token']);
         unset($data['_method']);
         Expenses::where('id',$data['id'])->update($data);
+        Cash::where('id',$exp['cash_id'])->update(['credit' => $data['amount']]);
         return redirect('/expenses'.'/'.$data['id']);
     }
 
     public function destroy($id){
-
+        $exp= Expenses::where('id', '=', $id)->firstOrFail();
+        $cash_id = $exp->cash_id;
         Expenses::find($id)->delete();
+        Cash::find($cash_id)->delete();
         return redirect('/expenses/index');
     }
 

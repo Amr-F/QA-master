@@ -32,10 +32,11 @@ class ReportController extends Controller
         $ar = AccountReceivable::getTotal();
         $invetory = Item::getTotal();
         $expense = Expenses::getTotal($startDate,$endDate);
-        $income_from_sale=Sale::getIncome($startDate,$endDate); 
+        $income_from_sale=Sale::getIncome($startDate,$endDate);
         $income_from_service=Service::getIncome($startDate,$endDate);
         $income_before  = Sale::getIncome($startDate,$endDate) + Service::getIncome($startDate,$endDate);
         $income_after = $income_before - $expense;
-        return view('quickReports.quickrepo',compact('cash','ap','ar','invetory','income_before','income_after','income_from_sale','income_from_service'));
+        $total_capital=($cash+$ar+$invetory)-$ap ;
+        return view('quickReports.quickrepo',compact('cash','ap','ar','invetory','income_before','income_after','income_from_sale','income_from_service','total_capital'));
     }
 }

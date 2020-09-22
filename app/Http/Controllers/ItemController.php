@@ -48,11 +48,11 @@ class ItemController extends Controller
 
 
             if ($sort == 1 ){
-                return view('items.index', ['item' => Item::orderBy('name')->paginate(50)]);}
+                return view('items.index', ['item' => Item::orderBy('name')->get()]);}
             elseif ($sort== 2){
-                return view('items.index', ['item' => Item::orderBy('id')->paginate(50)]);}
+                return view('items.index', ['item' => Item::orderBy('id')->get()]);}
             elseif ($sort==3){
-                return view('items.index', ['item' => Item::orderBy('quantity')->paginate(50)]);}
+                return view('items.index', ['item' => Item::orderBy('quantity')->get()]);}
 
 
 

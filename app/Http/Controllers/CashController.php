@@ -13,8 +13,12 @@ class CashController extends Controller
     }
 
     public function index(){
+        $totalCash = Cash::all();
         $cash= Cash::orderBy('created_at', 'desc')->paginate(10);
-        return view('cash.index',compact('cash'));
+        $debit = $totalCash->sum('debit');
+        $credit = $totalCash->sum('credit');
+        $total = $debit-$credit;
+        return view('cash.index',compact('cash','total'));
     }
 
     public function show(Cash $cash)

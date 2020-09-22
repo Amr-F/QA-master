@@ -44,6 +44,17 @@
                 </tbody>
             </table>
 
+            <div class="text-center mb-5">
+            <div class="form-row">
+                <div class="name"><h1>الاجمالي </h1>  </div>
+                <div class="value">
+                    <div class="input-group">
+                        <h1>  = {{$total}}</h1>
+                    </div>
+                </div>
+            </div>
+            </div>
+
             <div class="row">
                 <div class="col-12 text-center">
                     {{ $cash->links() }}

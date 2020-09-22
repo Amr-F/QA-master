@@ -6,6 +6,7 @@
     <div class="wrapper-pur wrapper--w960">
         <div class="card card-5">
             <div class="card-heading">
+
                 <h2 class="title">عرض فواتير المشتريات حسب تاريخ معين</h2>
 
             </div>
