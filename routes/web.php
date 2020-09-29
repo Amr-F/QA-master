@@ -203,3 +203,6 @@ Route::post('/quickReports/dayclosse' , 'DaycloseController@store');
 Route::get('manufacturing/create', function () {
     return view('/manufacturing/create');
 });
+Route::get('permissionToExchangeStore/create', function () {
+    return view('/permissionToExchangeStore/create');
+});

@@ -7,12 +7,10 @@
 @section('content')
 
 
-
-
     <div id="app" class="wrapper-pur wrapper--w960">
         <div class="card card-5">
             <div class="card-heading">
-                <h2 class="title">MAKE GOODS</h2>
+                <h2 class="title">Make Permission To Exchange Store</h2>
 
             </div>
             <div   class="card-body">
@@ -89,33 +87,6 @@
 
 
 
-                    <table class="table">
-                        <thead>
-                        <tr>
-                            <th>EXP. TYPE</th>
-                            <th>QUANTITY</th>
-
-                        </tr>
-                        </thead>
-                        <tbody>
-
-
-                        <tr>
-                            <td><div class="form-row">
-                                    <div class="input-group">
-                                        <input class="input--style-5" type="text" name="exp_type" required>
-                                    </div>
-                                </div></td>
-                            <td><div class="form-row">
-                                    <div class="input-group">
-                                        <input class="input--style-5" value="0" type="text" name="exp_quantity" required>
-                                    </div>
-                                </div></td>
-
-                        </tr>
-
-                        </tbody>
-                    </table>
                     <div>
                         <div class="text-center mb-5 noPrint" >
                             <button id="submit" class=" btn btn--radius-2 btn--green ">ADD</button>
