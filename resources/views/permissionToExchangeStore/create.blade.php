@@ -1,4 +1,3 @@
-
 <link rel="stylesheet" href="/css/jquery-ui.css">
 @extends('layouts.sidebar')
 @extends('layouts.app')
@@ -26,50 +25,27 @@
 
 
                     <div class="form-row">
-                        <div class="name">LOT NUMBER</div>
+                        <div class="name">permission numb</div>
                         <div class="value">
                             <div class="input-group">
-                                <input class="input--style-5" type="text" name="lot_numb" readonly>
+                                <input class="input--style-5" type="text" name="per_num" readonly>
                             </div>
                         </div>
                     </div>
-
-
-            <div class="form-row">
-                <div class="name">DATE</div>
-                <div class="value">
-                    <div class="input-group">
-                        <input id="names" class="input--style-5" ata-input="true" type="date" name="date" required>
-                    </div>
-                </div>
-            </div>
-
 
 
                     <div class="form-row">
-                        <div class="name">PRODUCT ID </div>
+                        <div class="name">DATE</div>
                         <div class="value">
                             <div class="input-group">
-                                <input class="input--style-5" type="text" name="product_id" required>
+                                <input id="names" class="input--style-5" ata-input="true" type="date" name="date" required>
                             </div>
                         </div>
                     </div>
-                    <div class="form-row">
-                        <div class="name">PRODUCT NAME </div>
-                        <div class="value">
-                            <div class="input-group">
-                                <input class="input--style-5" type="text" name="product_name" required>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="form-row">
-                        <div class="name">QUANTITY </div>
-                        <div class="value">
-                            <div class="input-group">
-                                <input class="input--style-5" type="text" name="product_quantity" required>
-                            </div>
-                        </div>
-                    </div>
+
+
+
+
 
                     <table class="table">
                         <thead>
